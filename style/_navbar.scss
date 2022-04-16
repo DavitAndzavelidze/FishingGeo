@@ -1,0 +1,81 @@
+// --------------------------Navbar---------------------------
+.nav_container {
+  position: relative;
+  max-width: 1300px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    transform: translateY(-10px);
+    width: 60px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+  }
+  .title {
+    font-size: 14px;
+    background-color: $btn1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: $primaryColor;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 5;
+    span {
+      margin-left: 5px;
+    }
+    &:hover {
+      box-shadow: -1px 1px 2px 2px rgb(97, 39, 39);
+    }
+  }
+  .setting {
+    color: $primaryColor;
+    margin-top: 8px;
+    margin-left: 5rem;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    animation: spin 10s linear infinite;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.5rem 2rem;
+    background: $primaryColor;
+    padding: 3px 10px;
+    border-radius: 5px;
+    z-index: 5;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $formColor;
+      transition: 0.3s;
+      padding-left: 10px;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:hover {
+        color: $btn1;
+      }
+    }
+  }
+}
+// -------------------Hidden Content-------------------------
+.hidden {
+  display: none;
+}
